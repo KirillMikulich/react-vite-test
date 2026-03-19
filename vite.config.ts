@@ -1,8 +1,9 @@
-import { fileURLToPath, URL } from 'node:url'
-import react from '@vitejs/plugin-react'
-import { defineConfig } from 'vite'
+import { fileURLToPath, URL } from 'node:url';
+import react from '@vitejs/plugin-react';
+import { defineConfig } from 'vite';
 
 export default defineConfig({
+  base: '/react-vite-test/',
   plugins: [react()],
   resolve: {
     alias: {
@@ -15,4 +16,4 @@ export default defineConfig({
       '@styles': fileURLToPath(new URL('./src/styles', import.meta.url)),
     },
   },
-})
+});
